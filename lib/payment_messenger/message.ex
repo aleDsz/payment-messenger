@@ -58,6 +58,8 @@ defmodule PaymentMessenger.Message do
       use Ecto.Schema
       import Ecto.Changeset
 
+      alias PaymentMessenger.Types.{Alphabetic, Alphanumeric, Binary, Hexadecimal, Numeric, Text}
+
       @primary_key false
       @behaviour PaymentMessenger.Message
       @before_compile PaymentMessenger.Message
