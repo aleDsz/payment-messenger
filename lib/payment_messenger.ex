@@ -4,15 +4,10 @@ defmodule PaymentMessenger do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> PaymentMessenger.hello()
-      :world
-
+  Gets the config entry for `PaymentMessenger` app
   """
-  def hello do
-    :world
+  @spec get_config(atom(), any()) :: any()
+  def get_config(key, default \\ nil) do
+    Application.get_env(:payment_messenger, key, default)
   end
 end
